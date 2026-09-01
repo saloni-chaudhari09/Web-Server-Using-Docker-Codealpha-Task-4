@@ -1,0 +1,8 @@
+.git
+.gitignore
+README.md
+*.log
+1..git → Prevents Git history and internal files from being copied into the Docker image.
+2..gitignore → Prevents Git configuration files from being copied into the Docker image.
+3.README.md → Prevents project documentation from being copied into the Docker image.
+4.*.log → Prevents unnecessary log files from being copied into the Docker image.

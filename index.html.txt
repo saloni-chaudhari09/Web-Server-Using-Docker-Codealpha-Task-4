@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Docker Web Server | DevOps Project</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #0f766e);
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 90px 20px 60px;
+        }
+
+        .docker-icon {
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+            color: #dbeafe;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            border-radius: 30px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: white;
+        }
+
+        /* Cards */
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 0 70px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            padding: 30px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.17);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #7dd3fc;
+        }
+
+        .card p {
+            color: #dbeafe;
+            line-height: 1.6;
+        }
+
+        /* Architecture */
+        .architecture {
+            margin-top: 30px;
+            text-align: center;
+            padding: 35px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .flow {
+            margin-top: 25px;
+            font-size: 18px;
+            line-height: 2.5;
+        }
+
+        .flow span {
+            display: inline-block;
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 25px;
+            background: #2563eb;
+        }
+
+        /* Status */
+        .status {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .status-box {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 30px;
+            background: #16a34a;
+            font-weight: bold;
+            box-shadow: 0 0 20px rgba(22, 163, 74, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #cbd5e1;
+        }
+
+        footer strong {
+            color: #38bdf8;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .flow span {
+                display: block;
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Docker<span>Web</span> 🚀</div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#architecture">Architecture</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="docker-icon">🐳</div>
+
+        <h1>
+            My <span>Docker Web Server</span>
+        </h1>
+
+        <p>
+            A professional containerized web server deployed using
+            Docker and Nginx on an AWS Linux EC2 instance.
+        </p>
+
+        <a href="#features" class="btn">
+            Explore Project
+        </a>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="container" id="features">
+
+        <h2 class="section-title">
+            🚀 Project Features
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🐳</div>
+
+                <h3>Docker Container</h3>
+
+                <p>
+                    The website is packaged and deployed inside
+                    a lightweight Docker container.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">🌐</div>
+
+                <h3>Nginx Web Server</h3>
+
+                <p>
+                    Nginx serves the website efficiently
+                    from inside the Docker container.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">☁️</div>
+
+                <h3>AWS EC2</h3>
+
+                <p>
+                    The Dockerized web server is deployed on
+                    an Amazon Linux EC2 virtual machine.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Architecture -->
+    <section class="container" id="architecture">
+
+        <h2 class="section-title">
+            🏗️ Deployment Architecture
+        </h2>
+
+        <div class="architecture">
+
+            <p>
+                The application follows a simple container-based
+                deployment architecture.
+            </p>
+
+            <div class="flow">
+
+                <span>💻 HTML Website</span>
+
+                ↓
+
+                <span>📄 Dockerfile</span>
+
+                ↓
+
+                <span>🐳 Docker Image</span>
+
+                ↓
+
+                <span>📦 Docker Container</span>
+
+                ↓
+
+                <span>🌐 Nginx</span>
+
+                ↓
+
+                <span>☁️ AWS EC2</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Status -->
+    <section class="status">
+
+        <div class="status-box">
+            ✅ Docker Container is Running Successfully
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Docker Web Server Project |
+            Built for <strong>DevOps Internship - Task 4</strong>
+        </p>
+
+        <p>
+            Docker • Nginx • AWS EC2 • Linux
+        </p>
+
+    </footer>
+
+</body>
+</html>
